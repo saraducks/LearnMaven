@@ -10,7 +10,7 @@
    ##src
    src will have the main and test folder. The main will contain the application and the test folder will contain the test
    cases to be executed at the time of build and test.
-#Maven commands:
+# Maven commands:
   1. maven archtype:generate
   This will generate the available archtypes, you can choose the one you want and build. 
   2. mvn compile
@@ -20,4 +20,12 @@
   4. java -cp .jar_file_path groupId(package_name).classname
   This will run the .java file and gives the output.
   
-  
+# phases:
+  * Validate - checks the structure of directories, config setting etc..,
+  * Compile - checks the source file and converts the .java to class file, checks for pom.xml
+  * Test - Runs the test cases from the test folder
+  * Package - executes the above phases, gives the .jar/.war/.ear
+  * Install - It installs the package into local maven repo, online repo is used in case dependency is not installed in local 
+  maven repo.
+  * Deploy - share your .jar/.war/.ear to others
+ 
